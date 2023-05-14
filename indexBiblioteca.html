@@ -13,21 +13,23 @@
     </head>
 <body class="sb-nav-fixed">
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark">    
             <a style="color: white; font-size: 40px">
                 <i class="bi bi-mortarboard-fill"></i>
-            </a>
-            <div class="container-fluid">
-                <form action="#" class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" style="width:500px">
-                    <button class="btn btn-outline-secondary" type="submit" value="buscar">
-                        <a></a><i class="bi bi-search"></i></a>
-                    </button>
-                </form>
-            </div>
-            <div class="container-fluid" style="position: relative">
+            </a>      
+            <div class="container-fluid" style="position: relative">             
                 <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                    <ul class="navbar-nav ms-lg-auto">
+                    <ul class="navbar-nav">                              
+                        <li style="width: 400px;">
+                                <form action="#" class="d-flex" style="margin-top: 10px;">
+                                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="buscar" style="width: 100%;">
+                                    <button class="btn btn-outline-secondary" type="submit" value="buscar">
+                                        <a></a><i class="bi bi-search"></i></a>
+                                    </button>
+                                </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-lg-auto">                       
                         <li>
                             <a href='indexBiblioteca.html' class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
                         </li>
@@ -44,6 +46,9 @@
                         </li>
                     </ul>
                 </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
     </header>
