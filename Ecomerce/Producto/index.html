@@ -1,0 +1,21 @@
+
+    <h1>Tienda</h1>
+    <div class="d-flex flex-wrap">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3">
+                <div class="card">
+                    <a class="card-body" href="@Url.Action("Details", "Libro", new { id = item.ID })" title="Ver detalle del libro">
+                    </a>
+                    <img src="@Url.Action("getImagen", "Producto", new { id = item.ID })" alt="Imagen" width="100%" height="240px">
+                    <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
+                    @{
+                        int numero = item.Precio;                 
+                        string numeroMiles = numero.ToString("N0");
+                    }
+                    <span>$ @numeroMiles</span>
+                </div>
+            </div>
+        }
+    </div>
+    <link rel="stylesheet" type="text/css" href="../Content/EstiloE.css">
