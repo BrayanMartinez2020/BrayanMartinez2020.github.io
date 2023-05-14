@@ -27,10 +27,10 @@
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav ms-lg-auto">
                     <li>
-                        <a href='/Home/Index' class='nav-link'><i class="bi bi-house"></i> Inicio</a>
+                        <a href='#' class='nav-link'><i class="bi bi-house"></i> Inicio</a>
                     </li>
                     <li>
-                        <a href='/Producto/Index' class='nav-link'><i class="bi bi-shop"></i> Tienda</a>
+                        <a href='#' class='nav-link'><i class="bi bi-shop"></i> Tienda</a>
                     </li>
                     <li>
                         <a href="#" class="nav-link dropdown" id="toggleButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +40,11 @@
                         </a>
                         <div class="dropdown">
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
-                                <li><a class="dropdown-item" href="#">@Marca.Nombre</a></li>
+                                <li><a class="dropdown-item" href="#">ASUS</a></li>
+                                <li><a class="dropdown-item" href="#">HP</a></li>
+                                <li><a class="dropdown-item" href="#">ACER</a></li>
+                                <li><a class="dropdown-item" href="#">TOSHIBA</a></li>
+                                <li><a class="dropdown-item" href="#">LOGITECH</a></li>
                             </ul>
                         </div>
                     </li>
@@ -52,7 +56,15 @@
                         </a>
                         <div class="dropdown">
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
-                                <li><a class="dropdown-item" href="#">@Categoria.Nombre</a></li>
+                                <li><a class="dropdown-item" href="#">Accesorios Externos</a></li>
+                                <li><a class="dropdown-item" href="#">Cables y Adaptadores</a></li>
+                                <li><a class="dropdown-item" href="#">Cajas</a></li>
+                                <li><a class="dropdown-item" href="#">Combos Cajas con Fuentes</a></li>
+                                <li><a class="dropdown-item" href="#">Diademas</a></li>
+                                <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                                <li><a class="dropdown-item" href="#">Sillas</a></li>
+                                <li><a class="dropdown-item" href="#">Equipos</a></li>
+                                <li><a class="dropdown-item" href="#">Memorias RAM</a></li>
                             </ul>
                         </div>
                     </li>
@@ -85,17 +97,17 @@
                     </a>
                 </button>
                 <div class="collapse" id="collapseExample">
-                    <form action="@Url.Action("CatalogoProductos", "Producto")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Productos</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("CatalogoProductos", "Producto")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Marcas</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("CatalogoProductos", "Producto")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Categorias</a>
                         </button>
@@ -104,6 +116,59 @@
             </div>
         </div>
     </div>
+    <br>
+    <div class="container" style="width: 70%;">
+        <h1>Tienda</h1>
+        <div class="d-flex flex-wrap">
+            <div class="col-lg-3">
+                <div class="card">
+                    <a class="card-body" href="#" title="Ver detalle del libro">
+                    </a>
+                    <img src="../Imagenes/Redragon-Zeus-H510-3.jpg" alt="Imagen" width="100%" height="240px">
+                    <h2>ZEUS H2</h2>
+                    <span>$ 240.000</span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <a class="card-body" href="#" title="Ver detalle del libro">
+                    </a>
+                    <img src="../Imagenes/Teclado cooler master.jpg" alt="Imagen" width="100%" height="240px">
+                    <h2>TECLADO GAMER COOLER MASTER</h2>
+                    <span>$ 599.200</span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <a class="card-body" href="#" title="Ver detalle del libro">
+                    </a>
+                    <img src="../Imagenes//Silla gamer redragon.jpg" alt="Imagen" width="100%" height="240px">
+                    <h2>SILLA GAMER REDRAGON</h2>
+                    <span>$ 3.110.998</span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <a class="card-body" href="#" title="Ver detalle del libro">
+                    </a>
+                    <img src="../Imagenes/control xbox.jpg" alt="Imagen" width="100%" height="210px">
+                    <h2>CONTROL XBOX SERIES S</h2>
+                    <span>$ 299.999</span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <a class="card-body" href="@Url.Action("Details", "Libro", new { id = item.ID })" title="Ver detalle del libro">
+                    </a>
+                    <img src="../Imagenes/mouse logitech.jpg" alt="Imagen" width="100%" height="240px">
+                    <h2>MOUSE LOGITECH</h2>
+                    <span>$ 140.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
     <script type="text/javascript">
         const toggleButton = document.querySelector('#toggleButton');
         const toggleIcon = document.querySelector('#toggleIcon');
