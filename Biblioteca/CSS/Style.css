@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Monserrat';
+    src: url(../../static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'MonserratH1';
+    src: url(../../static/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'MonserratLI';
+    src: url(../../static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'MonserratSpan';
+    src: url(../../static/Montserrat-Bold.ttf);
+}
+header{
+    background-color:black;
+}
+body {
+    font-family: 'Monserrat';
+}
+
+.navbar {
+    background-color: #17202A;
+}
+
+.nav-link:hover {
+    color: #979A9A;
+}
+.nav-link
+{
+    color: white;
+}
+
+li {
+    font-family: 'MonserratLI';
+    font-size: 20px;
+    margin-left: 40px;
+    color:white;
+}
+
+h1 {
+    font-family: 'MonserratH1';
+}
+
+h2 {
+    font-family: 'Monserrat';
+    font-size: 20px;
+    color: black;
+}
+
+.card
+{
+    background-color: white; 
+    margin-top: 20px;
+    flex: 1 200px;
+    border: solid;
+}
+
+span {
+    font-family: 'MonserratSpan';
+    font-size: 20px;
+}
+
+table {
+    font-family: 'Monserrat';
+    color: black;
+}
+
+input {
+    font-family: 'Monserrat';
+}
+
+.card-title
+{
+    font-family: 'MonserratSpan';
+    font-size: 18px;
+    color: black;
+}
+.card-text {
+    font-family: 'Monserrat';
+    font-size: 15px;
+    color: black;
+}
+
+.selectSt
+{
+    background-color: black;
+    color:white;
+}
+
+.select {
+    background-color: black;
+}
