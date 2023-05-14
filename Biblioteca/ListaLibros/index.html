@@ -54,9 +54,9 @@
                 </div>
                 <hr style="background-color: white">
                 <div>
-                    <form action="@Url.Action("Details", "Perfil", new { id = int.Parse(HttpContext.Current.Session["ID"].ToString()) })" method="post" style="width:100%">
+                    <form action="#" method="post" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 15px; color: white; width: 100%">
-                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i>  @HttpContext.Current.Session["Nombres"].ToString()</a>
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i> INVITADO</a>
                         </button>
                     </form>
                 </div>
@@ -116,14 +116,14 @@
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-bookmark-check-fill"></i> Solicitudes</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("Index", "Prestamo")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-book-fill"></i> Préstamos</a>
                         </button>
                     </form>
                 <div style="position:absolute; bottom:0; width:90%">
                     <hr style="background-color: white;">
-                    <form action="@Url.Content("~/Usuario/Logout")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" name="cerrar" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="font-size: 18px; border: none"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
                         </button>
@@ -132,31 +132,64 @@
                 </div>
         </div>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="row mt-2 pt-4 p-2">
+        <div class="card mx-auto" style="background-color: #17202A; opacity: 0.9; width: 90%;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="product-details mr-2">
+                            <div class="d-flex justify-content-between" style="color:white">
+                                <span class="ml-2" style="font-size: 20px;">DETALLE DE PRESTAMO</span>
+                            </div>
+                            <hr class="mt-2 mb-2">
+                            <div>
+                                    <div class="card mb-2">
+                                        <div class="row" style="margin-top: 15px; margin-bottom: 15px">
+                                            <div class="col-2">
+                                                <img src="../Imagenes/satanas.jpg" style="width:60px; height: 80px; margin-left:10px" />
+                                            </div>
+                                            <div class="col-6" style="margin-left: 10px">
+                                                <div class="ml-2">
+                                                    <span class="font-weight-bold d-block">SATANAS</span>
+                                                    <span class="spec">MARIO MENDOZA</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-3" style="margin-left: 20px">
+                                                    <div class="form-actions" style="text-align:right">
+                                                        <button value="Delete" class="btn btn-outline-danger rounded-0" style="height: 80px"><i class="bi bi-trash3" style="font-size: 26px"></i></button>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="margin-top: 45px;">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-13">
+                                        <div class="payment-info">
+                                            <div class="justify-content-start mb-2" style="font-size: 20px;" >
+                                                Tienes<span id="cantidad-articulos" class="ml-1">1</span> artículo(s) en tu lista
+                                            </div>
+                                            <hr style="background-color: black">
+                                            <div class="form-horizontal">
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-13" style="font-size: 20px;">
+                                                        <input style="width: 100%; border-radius: 0px;" class="btn btn-primary btn-block" type="submit" value="SOLICITAR PRESTAMO">
+                                                    </div>
+                                                </div>                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../Imagenes/Imagen1.jpg" class="d-block w-100" alt="IMG1" style="height:600px">
-            </div>
-            <div class="carousel-item">
-                <img src="../Imagenes/imagen2.jpg" class="d-block w-100" alt="IMG2" style="height:600px">
-            </div>
-            <div class="carousel-item">
-                <img src="../Imagenes/Imagen3.jpg" class="d-block w-100" alt="IMG3" style="height:600px">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
     <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
@@ -169,5 +202,3 @@
     <script src="~/Scripts/scriptsBiblioteca.js"></script>
 </body>
 </html>
-
-

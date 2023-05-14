@@ -18,7 +18,7 @@
                 <i class="bi bi-mortarboard-fill"></i>
             </a>
             <div class="container-fluid">
-                <form action="@Url.Action("Index", "Libro")" class="d-flex">
+                <form action="#" class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" style="width:500px">
                     <button class="btn btn-outline-secondary" type="submit" value="buscar">
                         <a></a><i class="bi bi-search"></i></a>
@@ -29,22 +29,21 @@
                 <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                     <ul class="navbar-nav ms-lg-auto">
                         <li>
-                            <a href='/Home/Index' class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
+                            <a href='../Shared/_Layout.html' class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
                         </li>
                         <li>
                             <a href='../Libro/index.html' class="nav-link"><i class="bi bi-book-fill"></i> Libros</a>
                         </li>
                         <li>
-                            <a href='/ListaLibros/Index' class="nav-link"><i class="bi bi-handbag-fill"></i> Lista</a>
+                            <a href='../ListaLibros/index.html' class="nav-link"><i class="bi bi-handbag-fill"></i> Lista</a>
                         </li>
                         <li>
-                            <a href='/Usuario/Isesion' class="nav-link"><i class="bi bi-file-person"></i> Entrar</a>
+                            <button href="#" style="width:60px" class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                <a style="color: white; border: none;"><i class="bi bi-person-circle" style="font-size: 22px"></i></a>
+                            </button>
                         </li>
                     </ul>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
             </div>
         </nav>
     </header>
@@ -133,28 +132,36 @@
                 </div>
         </div>
     </div>
+<br>
 <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
 <div class="form-group">
     <div class="col-md-12">
         <div class="row">
             <div class="col-lg-2" style="width:100%">
-
-                <form action="@Url.Action("Index", "Libro")">
-                    <label>Filtrar</label>
-                    <hr style="background-color: black">
+                <form>
+                    <br>
                     <label>Idioma</label>
                     <select name="Idiomas" class="form-control selectSt">
                         <option value="" selected disabled>Seleccione una opción</option>
+                        <option>ESPAÑOL</option>
+                        <option>INGLES</option>
+                        <option>JAPONES</option>
                     </select>
                     <br />
                     <label>Tipo de libro</label>
                     <select name="TipoLibro" class="form-control selectSt">
                         <option value="" selected disabled>Seleccione una opción</option>
+                        <option>LECTURA</option>
+                        <option>CLASE</option>
                     </select>
                     <br />
                     <label>Autor</label>
                     <select name="Autor" class="form-control selectSt">
                         <option value="" selected disabled>Seleccione una opción</option>
+                        <option>MARIO MENDOZA</option>
+                        <option>GABRIEL GARCIA MARQUEZ</option>
+                        <option>RAFAEL POMBO</option>
+                        <option>J.K ROWLING</option> 
                     </select>
                     <br />
                     <button class="btn btn-dark" type="submit" value="buscar" style="width:100%; height:60px; background-color:black; border-radius: 40px">
@@ -166,19 +173,138 @@
                 <div class="d-flex flex-wrap">
                         <div class="col-lg-6">
                             <div class="card">
-                                <a class="card-body" href="@Url.Action("Details", "Libro", new { id = item.ID })" title="Ver detalle del libro">
+                                <a class="card-body" href="#" title="Ver detalle del libro">
                                     <div class="col-lg-2" style="margin: 0.5em; float: left; padding: 0;">
-                                        <img src="@Url.Action("getImagen", "Libro", new { id = item.ID })" alt="Imagen" width="100%" height="240px">
+                                        <img src="../Imagenes/cien años de soledad.jpg" alt="Imagen" width="100%" height="240px">
                                     </div>
                                     <div class="col-lg-5" style="margin: 0.5em; float: left; padding: 0;">
-                                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
-                                        <h5 class="card-title">Por: @Html.DisplayFor(modelItem => item.Autor1.Nombre)</h5>
-                                        <p class="card-text">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                                        <h5 class="card-title">CIEN AÑOS DE SOLEDAD</h5>
+                                        <h5 class="card-title">Por: GABRIEL GARCIA MARQUEZ</h5>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus auctor dolor ut odio faucibus suscipit a at augue. 
+                                            In feugiat diam ut ligula commodo condimentum. 
+                                        </p>
                                     </div>
                                     <div class="col-lg-3" style="margin: 0.5em; float: left; padding: 0;">
-                                        <p class="card-text">Editorial: @Html.DisplayFor(modelItem => item.Editorial1.Nombre)</p>
-                                        <p class="card-text">Idioma: @Html.DisplayFor(modelItem => item.Idioma1.Nombre)</p>
-                                        <p class="card-text">Fecha de publicación: @Html.DisplayFor(modelItem => item.FechaPublicacion)</p>
+                                        <p class="card-text">Editorial: SALAMANDRA</p>
+                                        <p class="card-text">Idioma: ESPAÑOL</p>
+                                        <p class="card-text">Fecha de publicación: 30/05/1967</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <a class="card-body" href="#" title="Ver detalle del libro">
+                                    <div class="col-lg-2" style="margin: 0.5em; float: left; padding: 0;">
+                                        <img src="../Imagenes/satanas.jpg" alt="Imagen" width="100%" height="240px">
+                                    </div>
+                                    <div class="col-lg-5" style="margin: 0.5em; float: left; padding: 0;">
+                                        <h5 class="card-title">SATANAS</h5>
+                                        <h5 class="card-title">Por: MARIO MENDOZA</h5>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus auctor dolor ut odio faucibus suscipit a at augue. 
+                                            In feugiat diam ut ligula commodo condimentum. 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3" style="margin: 0.5em; float: left; padding: 0;">
+                                        <p class="card-text">Editorial: SALAMANDRA</p>
+                                        <p class="card-text">Idioma: ESPAÑOL</p>
+                                        <p class="card-text">Fecha de publicación: 30/05/1967</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <a class="card-body" href="#" title="Ver detalle del libro">
+                                    <div class="col-lg-2" style="margin: 0.5em; float: left; padding: 0;">
+                                        <img src="../Imagenes/diario del fin del mundo.jpg" alt="Imagen" width="100%" height="240px">
+                                    </div>
+                                    <div class="col-lg-5" style="margin: 0.5em; float: left; padding: 0;">
+                                        <h5 class="card-title">DIARIO DEL FIN DEL MUNDO</h5>
+                                        <h5 class="card-title">Por: MARIO MENDOZA</h5>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus auctor dolor ut odio faucibus suscipit a at augue. 
+                                            In feugiat diam ut ligula commodo condimentum. 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3" style="margin: 0.5em; float: left; padding: 0;">
+                                        <p class="card-text">Editorial: SALAMANDRA</p>
+                                        <p class="card-text">Idioma: ESPAÑOL</p>
+                                        <p class="card-text">Fecha de publicación: 30/05/1967</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <a class="card-body" href="#" title="Ver detalle del libro">
+                                    <div class="col-lg-2" style="margin: 0.5em; float: left; padding: 0;">
+                                        <img src="../Imagenes/el gato bandido.jpg" alt="Imagen" width="100%" height="240px">
+                                    </div>
+                                    <div class="col-lg-5" style="margin: 0.5em; float: left; padding: 0;">
+                                        <h5 class="card-title">EL GATO BANDIDO</h5>
+                                        <h5 class="card-title">Por: RAFAEL POMBO</h5>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus auctor dolor ut odio faucibus suscipit a at augue. 
+                                            In feugiat diam ut ligula commodo condimentum. 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3" style="margin: 0.5em; float: left; padding: 0;">
+                                        <p class="card-text">Editorial: RANDOM HOUSE</p>
+                                        <p class="card-text">Idioma: ESPAÑOL</p>
+                                        <p class="card-text">Fecha de publicación: 30/05/1967</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <a class="card-body" href="#" title="Ver detalle del libro">
+                                    <div class="col-lg-2" style="margin: 0.5em; float: left; padding: 0;">
+                                        <img src="../Imagenes/HarryPoter el prisionero.png" alt="Imagen" width="100%" height="240px">
+                                    </div>
+                                    <div class="col-lg-5" style="margin: 0.5em; float: left; padding: 0;">
+                                        <h5 class="card-title">HARRY POTER EL PRISIONERO DE AZKABAN</h5>
+                                        <h5 class="card-title">Por: J.K ROWLING</h5>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus auctor dolor ut odio faucibus suscipit a at augue. 
+                                            In feugiat diam ut ligula commodo condimentum. 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3" style="margin: 0.5em; float: left; padding: 0;">
+                                        <p class="card-text">Editorial: SALAMANDRA</p>
+                                        <p class="card-text">Idioma: ESPAÑOL</p>
+                                        <p class="card-text">Fecha de publicación: 30/05/1967</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <a class="card-body" href="#" title="Ver detalle del libro">
+                                    <div class="col-lg-2" style="margin: 0.5em; float: left; padding: 0;">
+                                        <img src="../Imagenes/satanas.jpg" alt="Imagen" width="100%" height="240px">
+                                    </div>
+                                    <div class="col-lg-5" style="margin: 0.5em; float: left; padding: 0;">
+                                        <h5 class="card-title">SATANAS</h5>
+                                        <h5 class="card-title">Por: MARIO MENDOZA</h5>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus auctor dolor ut odio faucibus suscipit a at augue. 
+                                            In feugiat diam ut ligula commodo condimentum. 
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3" style="margin: 0.5em; float: left; padding: 0;">
+                                        <p class="card-text">Editorial: PLANETA</p>
+                                        <p class="card-text">Idioma: INGLES</p>
+                                        <p class="card-text">Fecha de publicación: 30/05/1967</p>
                                     </div>
                                 </a>
                             </div>
