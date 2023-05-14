@@ -13,43 +13,45 @@
     </head>
 <body class="sb-nav-fixed">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">    
-            <a style="color: white; font-size: 40px">
-                <i class="bi bi-mortarboard-fill"></i>
-            </a>      
-            <div class="container-fluid" style="position: relative">             
-                <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                    <ul class="navbar-nav">                              
-                        <li style="width: 400px;">
-                                <form action="#" class="d-flex" style="margin-top: 10px;">
-                                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="buscar" style="width: 100%;">
-                                    <button class="btn btn-outline-secondary" type="submit" value="buscar">
-                                        <a></a><i class="bi bi-search"></i></a>
-                                    </button>
-                                </form>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-lg-auto">                       
-                        <li>
-                            <a href='indexBiblioteca.html' class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
-                        </li>
-                        <li>
-                            <a href='Biblioteca/Libro/index.html' class="nav-link"><i class="bi bi-book-fill"></i> Libros</a>
-                        </li>
-                        <li>
-                            <a href='Biblioteca/ListaLibros/index.html' class="nav-link"><i class="bi bi-handbag-fill"></i> Lista</a>
-                        </li>
-                        <li>
-                            <button href="#" style="width:60px" class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                                <a style="color: white; border: none;"><i class="bi bi-person-circle" style="font-size: 22px"></i></a>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark"> 
+            <div class="container col-md-12">
+                <a style="color: white; font-size: 40px">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </a> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+                </button>     
+                <div class="container-fluid" style="position: relative">             
+                    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                        <ul class="navbar-nav">                              
+                            <li style="width: 400px;">
+                                    <form action="#" class="d-flex" style="margin-top: 10px;">
+                                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="buscar" style="width: 100%;">
+                                        <button class="btn btn-outline-secondary" type="submit" value="buscar">
+                                            <a></a><i class="bi bi-search"></i></a>
+                                        </button>
+                                    </form>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-lg-auto">                       
+                            <li>
+                                <a href='indexBiblioteca.html' class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
+                            </li>
+                            <li>
+                                <a href='Biblioteca/Libro/index.html' class="nav-link"><i class="bi bi-book-fill"></i> Libros</a>
+                            </li>
+                            <li>
+                                <a href='Biblioteca/ListaLibros/index.html' class="nav-link"><i class="bi bi-handbag-fill"></i> Lista</a>
+                            </li>
+                            <li>
+                                <button href="#" style="width:60px" class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                    <a style="color: white; border: none;"><i class="bi bi-person-circle" style="font-size: 22px"></i></a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>                  
+                </div>
+            </div> 
         </nav>
     </header>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="width:16%">
@@ -59,15 +61,15 @@
                 </div>
                 <hr style="background-color: white">
                 <div>
-                    <form action="@Url.Action("Details", "Perfil", new { id = int.Parse(HttpContext.Current.Session["ID"].ToString()) })" method="post" style="width:100%">
+                    <form action="#" method="post" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 15px; color: white; width: 100%">
-                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i>  @HttpContext.Current.Session["Nombres"].ToString()</a>
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i> INVITADO</a>
                         </button>
                     </form>
                 </div>
                 <hr style="background-color: white">
                     <div>
-                        <form action="@Url.Action("Index", "Dashboard")" method="post" style="width:100%">
+                        <form action="#" style="width:100%">
                             <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                 <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-speedometer2"></i> Dashboard</a>
                             </button>
@@ -82,28 +84,28 @@
                     </button>
                     <div class="collapse" id="collapseExample">
                         <div>
-                            <form action="@Url.Action("Index", "CatalogoLibros")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Libros</a>
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <form action="@Url.Action("Index", "Autor")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Autores</a>
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <form action="@Url.Action("Index", "Idioma")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Idiomas</a>
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <form action="@Url.Action("Index", "Editorial")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Editorial</a>
                                 </button>
@@ -111,24 +113,24 @@
                         </div>
                     </div>
 
-                    <form action="@Url.Action("Index", "Usuario")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-people-fill"></i> Usuarios</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("Index", "Solicitud")" method="post" style="width:100%" style="position: relative">
+                    <form action="#" style="width:100%" style="position: relative">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-bookmark-check-fill"></i> Solicitudes</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("Index", "Prestamo")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-book-fill"></i> Préstamos</a>
                         </button>
                     </form>
                 <div style="position:absolute; bottom:0; width:90%">
                     <hr style="background-color: white;">
-                    <form action="@Url.Content("~/Usuario/Logout")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" name="cerrar" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="font-size: 18px; border: none"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
                         </button>

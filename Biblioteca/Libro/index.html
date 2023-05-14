@@ -59,15 +59,15 @@
                 </div>
                 <hr style="background-color: white">
                 <div>
-                    <form action="@Url.Action("Details", "Perfil", new { id = int.Parse(HttpContext.Current.Session["ID"].ToString()) })" method="post" style="width:100%">
+                    <form action="#" method="post" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 15px; color: white; width: 100%">
-                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i>  @HttpContext.Current.Session["Nombres"].ToString()</a>
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i> INVITADO</a>
                         </button>
                     </form>
                 </div>
                 <hr style="background-color: white">
                     <div>
-                        <form action="@Url.Action("Index", "Dashboard")" method="post" style="width:100%">
+                        <form action="#" style="width:100%">
                             <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                 <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-speedometer2"></i> Dashboard</a>
                             </button>
@@ -82,28 +82,28 @@
                     </button>
                     <div class="collapse" id="collapseExample">
                         <div>
-                            <form action="@Url.Action("Index", "CatalogoLibros")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Libros</a>
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <form action="@Url.Action("Index", "Autor")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Autores</a>
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <form action="@Url.Action("Index", "Idioma")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Idiomas</a>
                                 </button>
                             </form>
                         </div>
                         <div>
-                            <form action="@Url.Action("Index", "Editorial")" method="post" style="width:100%">
+                            <form action="#" style="width:100%">
                                 <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                                     <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Editorial</a>
                                 </button>
@@ -111,24 +111,24 @@
                         </div>
                     </div>
 
-                    <form action="@Url.Action("Index", "Usuario")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-people-fill"></i> Usuarios</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("Index", "Solicitud")" method="post" style="width:100%" style="position: relative">
+                    <form action="#" style="width:100%" style="position: relative">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-bookmark-check-fill"></i> Solicitudes</a>
                         </button>
                     </form>
-                    <form action="@Url.Action("Index", "Prestamo")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-book-fill"></i> Préstamos</a>
                         </button>
                     </form>
                 <div style="position:absolute; bottom:0; width:90%">
                     <hr style="background-color: white;">
-                    <form action="@Url.Content("~/Usuario/Logout")" method="post" style="width:100%">
+                    <form action="#" style="width:100%">
                         <button class="btn btn-outline-secondary" type="submit" name="cerrar" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
                             <a style="font-size: 18px; border: none"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
                         </button>
