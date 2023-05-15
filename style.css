@@ -42,6 +42,7 @@ h1
     box-shadow: 0px 0px 40px #ccc;
     cursor: pointer;
   }
+  
 .habilidad
 {
     margin-top: 20px;
@@ -50,3 +51,24 @@ h1
     background-color:black; 
     border-radius: 40px;
 }
+
+.linea-con-texto {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .linea-con-texto hr {
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 10px;
+  }
+  
+  .texto-en-linea {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
