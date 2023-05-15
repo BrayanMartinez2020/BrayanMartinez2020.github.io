@@ -32,10 +32,16 @@ h1
 {
     margin-top: 20px; 
     flex: 1 200px; 
-    border: solid;
+    border: 1px solid #ccc;
     border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
 }
-
+.card:hover {
+    box-shadow: 0px 0px 40px #ccc;
+    cursor: pointer;
+  }
 .habilidad
 {
     margin-top: 20px;
