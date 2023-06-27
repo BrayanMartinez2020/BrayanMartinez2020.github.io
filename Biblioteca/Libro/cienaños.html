@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portafolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
+    </head>
+<body class="sb-nav-fixed">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark"> 
+            <div class="container col-md-12">
+                <a style="color: white; font-size: 40px">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>     
+                <div class="container-fluid" style="position: relative">             
+                    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                        <ul class="navbar-nav">                              
+                            <li style="width: 400px;">
+                                    <form action="#" class="d-flex" style="margin-top: 10px;">
+                                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="buscar" style="width: 100%;">
+                                        <button class="btn btn-outline-secondary" type="submit" value="buscar">
+                                            <a></a><i class="bi bi-search"></i></a>
+                                        </button>
+                                    </form>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-lg-auto">                       
+                            <li>
+                                <a href='../../indexBiblioteca.html' class="nav-link"><i class="bi bi-house-fill"></i> Inicio</a>
+                            </li>
+                            <li>
+                                <a href='../Libro/index.html' class="nav-link"><i class="bi bi-book-fill"></i> Libros</a>
+                            </li>
+                            <li>
+                                <a href='../ListaLibros/index.html' class="nav-link"><i class="bi bi-handbag-fill"></i> Lista</a>
+                            </li>
+                            <li>
+                                <button href="#" style="width:60px" class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                    <a style="color: white; border: none;"><i class="bi bi-person-circle" style="font-size: 22px"></i></a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>                  
+                </div>
+            </div> 
+        </nav>
+    </header>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="width:16%">
+        <div class="offcanvas-body" style="background-color: #17202A">
+                <div style="margin-left:10px; color:white">
+                    <h1 style="text-align:center; border: none; font-size: 50px;"><i class="bi bi-mortarboard"></i></h1>
+                </div>
+                <hr style="background-color: white">
+                <div>
+                    <form action="#" method="post" style="width:100%">
+                        <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 15px; color: white; width: 100%">
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-person-square"></i> INVITADO</a>
+                        </button>
+                    </form>
+                </div>
+                <hr style="background-color: white">
+                    <div>
+                        <form action="#" style="width:100%">
+                            <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                                <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                            </button>
+                        </form>
+                    </div>
+                    <hr style="background-color: white">
+                    <button id="toggleButton" class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width: 100%; color: white; text-align: left; border: none; ">
+                        <a style="margin-left: 0px; border: none; font-size: 18px;">
+                            <i class="bi bi-list-ul"></i> Biblioteca
+                            <i id="toggleIcon" class="bi bi-caret-right-fill" style="float: right;"></i>
+                        </a>
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div>
+                            <form action="#" style="width:100%">
+                                <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                                    <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Libros</a>
+                                </button>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="#" style="width:100%">
+                                <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                                    <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Autores</a>
+                                </button>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="#" style="width:100%">
+                                <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                                    <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Idiomas</a>
+                                </button>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="#" style="width:100%">
+                                <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                                    <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-dot"></i> Editorial</a>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <form action="#" style="width:100%">
+                        <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-people-fill"></i> Usuarios</a>
+                        </button>
+                    </form>
+                    <form action="#" style="width:100%" style="position: relative">
+                        <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-bookmark-check-fill"></i> Solicitudes</a>
+                        </button>
+                    </form>
+                    <form action="#" style="width:100%">
+                        <button class="btn btn-outline-secondary" type="submit" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                            <a style="margin-left: 0px; border: none; font-size: 18px;"><i class="bi bi-book-fill"></i> Préstamos</a>
+                        </button>
+                    </form>
+                <div style="position:absolute; bottom:0; width:90%">
+                    <hr style="background-color: white;">
+                    <form action="#" style="width:100%">
+                        <button class="btn btn-outline-secondary" type="submit" name="cerrar" style="text-align: left; border: none; font-size: 18px; color: white; width: 100%">
+                            <a style="font-size: 18px; border: none"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
+                        </button>
+                    </form>
+                    <br />
+                </div>
+        </div>
+    </div>
+<div class="mx-auto" style="width:60%">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card" style="border: inset 0pt">
+                <div class="card-body">
+                    <div class="form-group">
+                        <div>
+                            <img src="../Imagenes/cien años de soledad.jpg" style="width: 100%; height: 500px; border-radius: 20px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">            
+            <div class="card" style="border: inset 0pt;">
+                <div class="card-body">
+                    <div class="form-group" style="text-align:center">
+                        <h1 style="color:black; font-size:30px"><b>CIEN AÑOS DE SOLEDAD</b></h1>
+                        <hr style="background-color: black; flex-grow: 1; height: 2px;" />
+                    </div>
+                    <div class="table-responsive" style="border-radius: 20px; border: 1px solid #ccc;">
+                        <table align="center" class="table table-detallesLibro" style="margin-top:15px">
+                            <tr>
+                                <th>Autor:</th>
+                                <td>GABRIEL GARCIA MARQUEZ</td>
+                            </tr>
+                            <tr>
+                                <th>Fecha de publicación:</th>
+                                <td>30/05/1967</td>
+                            </tr>
+                            <tr>
+                                <th>Idioma:</th>
+                                <td>ESPAÑOL</td>
+                            </tr>
+                            <tr>
+                                <th>Editorial:</th>
+                                <td>SALAMANDRA</td>
+                            </tr>
+                        </table>               
+                            <br />
+                            <button class="btn btn-dark btn-detalleLibro" type="submit">
+                                AGREGAR A LA LISTA
+                            </button>
+                            <br />
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>   
+    <hr style="background-color: black; flex-grow: 1; height: 2px;" />
+    <div style="margin-bottom: 80px">
+        <h1>Descripcion</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel porta lacus, id tempus arcu. 
+            In imperdiet sed ligula in accumsan. Ut diam arcu, volutpat sit amet placerat eu, aliquet in enim. 
+            Pellentesque gravida rhoncus metus, iaculis auctor diam rhoncus nec. Proin pretium non odio quis commodo. 
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed viverra lectus 
+            at ligula tempor vestibulum. Proin at neque id purus pharetra eleifend sit amet ultrices lacus. In at libero
+            nec dolor vestibulum mattis eu at velit. Cras posuere sagittis tempus. Ut luctus neque tortor, non sodales 
+            orci accumsan sed. Aenean semper augue a leo consequat, at pharetra arcu lobortis.
+        </p>
+        <p>
+            Proin vehicula sagittis venenatis. Fusce luctus justo libero, et scelerisque purus gravida ac. 
+            Aenean ornare ante risus, et gravida mi iaculis ac. Vivamus sollicitudin sollicitudin odio, id ultricies odio 
+            fringilla sit amet. Etiam tellus risus, placerat vitae nibh sit amet, euismod lobortis libero. Vestibulum tempor
+            ultricies massa, sit amet semper nunc condimentum quis. Morbi quam libero, blandit vitae dictum et, pharetra 
+            sit amet arcu.
+        </p>
+        <p>
+            In hac habitasse platea dictumst. Vivamus quis nibh interdum, tincidunt diam id, aliquam dui. 
+            Curabitur fringilla lorem id quam hendrerit, non facilisis justo tincidunt. Nullam
+            et arcu orci. Pellentesque pretium erat enim, hendrerit gravida mauris semper eget. 
+            Ut commodo, ipsum vitae convallis ultricies, nibh ligula molestie eros, a rhoncus est
+            ipsum sit amet tortor. Curabitur finibus pharetra ligula at porttitor. Vivamus scelerisque
+            consectetur mauris, eget pulvinar risus suscipit ut. Integer eget hendrerit orci. Maecenas 
+            bibendum varius sapien, eu vehicula augue rutrum vitae. Vestibulum ante ipsum primis in faucibus orci 
+            luctus et ultrices posuere cubilia curae;
+        </p>
+        <br>
+    </div>
+</div>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/Scripts/scriptsBiblioteca.js"></script>
+</body>
+</html>
