@@ -139,97 +139,89 @@
                 </div>
         </div>
     </div>
-    <br />
-    <header style="background-color: rgb(238,238,238) ">
-        <br />
-        <h1 style="text-align: center">Libros</h1>
-        <br />
-    </header>
-    <br />
-        <div class="row mt-2 pt-4 p-2">
-            <div class="card mx-auto contenidoLista">
+<div class="mx-auto" style="width:60%">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card" style="border: inset 0pt">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="mr-2">
-                                <div>
-                                    <div class="card mb-2 itemLista">
-                                        <div class="row" style="margin-top: 15px; margin-bottom: 15px">
-                                            <div class="col-2">
-                                                <img src="../Imagenes/cien años de soledad.jpg" style="width:60px; height: 80px; margin-left:15px" />
-                                            </div>
-                                            <div class="col-6" style="margin-left: 10px">
-                                                <div class="ml-2">
-                                                    <span class="font-weight-bold d-block">CIEN AÑOS DE SOLEDAD</span>
-                                                    <h2 class="spec">GRABRIEL GARCIA MARQUEZ</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-3" style="margin-left: 4%">  
-                                                <div class="form-actions" style="text-align:right">
-                                                    <button value="Delete" class="btn btn-outline-danger" style="height: 80px; border-radius:10px">
-                                                        <i class="bi bi-trash3" style="font-size: 26px"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card mb-2 itemLista">
-                                        <div class="row" style="margin-top: 15px; margin-bottom: 15px">
-                                            <div class="col-2">
-                                                <img src="../Imagenes/HarryPoter el prisionero.png" style="width:60px; height: 80px; margin-left:15px" />
-                                            </div>
-                                            <div class="col-6" style="margin-left: 10px">
-                                                <div class="ml-2">
-                                                    <span class="font-weight-bold d-block">HARRY POTER EL PRISIONERO DE AZKABAN</span>
-                                                    <h2 class="spec">J.K ROWLING</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-3" style="margin-left: 4%">  
-                                                <div class="form-actions" style="text-align:right">
-                                                    <button value="Delete" class="btn btn-outline-danger" style="height: 80px; border-radius:10px">
-                                                        <i class="bi bi-trash3" style="font-size: 26px"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card" style="width: 100%; border: solid 0.5px black;">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-13">
-                                            <div class="payment-info">
-                                                <div class="justify-content-start mb-2" style="font-size: 20px;">
-                                                    Tienes<span id="cantidad-articulos" class="ml-1"> 1 </span> artículo(s) en tu lista
-                                                </div>
-                                                <hr style="background-color: black;">
-                                                <div class="form-horizontal">
-                                                    <input class="form-control" type="hidden" name="solicitudes.Index" value="@item.ID" />
-                                                    <input class="form-control" type="hidden" name="solicitudes[@item.ID].Usuario" value="@ID" />
-                                                    <input class="form-control" type="hidden" name="solicitudes[@item.ID].Libro" value="@item.Libro1.ID" />
-                                                    <input class="form-control" type="hidden" name="solicitudes[@item.ID].Estado" value="1" />
- 
-                                                    <div class="form-group">
-                                                        <button class="btn btn-outline-dark btn-detalleLibro" style="width:100%; color: white" type="submit">
-                                                            SOLICITAR PRESTAMO
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <div>
+                            <img src="../Imagenes/el gato bandido.jpg" style="width: 100%; height: 500px; border-radius: 20px;" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-sm-6">            
+            <div class="card" style="border: inset 0pt;">
+                <div class="card-body">
+                    <div class="form-group" style="text-align:center">
+                        <h1 style="color:black; font-size:30px"><b>CIEN AÑOS DE SOLEDAD</b></h1>
+                        <hr style="background-color: black; flex-grow: 1; height: 2px;" />
+                    </div>
+                    <div class="table-responsive" style="border-radius: 20px; border: 1px solid #ccc;">
+                        <table align="center" class="table table-detallesLibro" style="margin-top:15px">
+                            <tr>
+                                <th>Autor:</th>
+                                <td>RAFAEL POMBO</td>
+                            </tr>
+                            <tr>
+                                <th>Fecha de publicación:</th>
+                                <td>30/05/1967</td>
+                            </tr>
+                            <tr>
+                                <th>Idioma:</th>
+                                <td>ESPAÑOL</td>
+                            </tr>
+                            <tr>
+                                <th>Editorial:</th>
+                                <td>RANDOM HOUSE</td>
+                            </tr>
+                        </table>               
+                            <br />
+                            <button class="btn btn-dark btn-detalleLibro" type="submit">
+                                AGREGAR A LA LISTA
+                            </button>
+                            <br />
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>   
+    <hr style="background-color: black; flex-grow: 1; height: 2px;" />
+    <div style="margin-bottom: 80px">
+        <h1>Descripcion</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel porta lacus, id tempus arcu. 
+            In imperdiet sed ligula in accumsan. Ut diam arcu, volutpat sit amet placerat eu, aliquet in enim. 
+            Pellentesque gravida rhoncus metus, iaculis auctor diam rhoncus nec. Proin pretium non odio quis commodo. 
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed viverra lectus 
+            at ligula tempor vestibulum. Proin at neque id purus pharetra eleifend sit amet ultrices lacus. In at libero
+            nec dolor vestibulum mattis eu at velit. Cras posuere sagittis tempus. Ut luctus neque tortor, non sodales 
+            orci accumsan sed. Aenean semper augue a leo consequat, at pharetra arcu lobortis.
+        </p>
+        <p>
+            Proin vehicula sagittis venenatis. Fusce luctus justo libero, et scelerisque purus gravida ac. 
+            Aenean ornare ante risus, et gravida mi iaculis ac. Vivamus sollicitudin sollicitudin odio, id ultricies odio 
+            fringilla sit amet. Etiam tellus risus, placerat vitae nibh sit amet, euismod lobortis libero. Vestibulum tempor
+            ultricies massa, sit amet semper nunc condimentum quis. Morbi quam libero, blandit vitae dictum et, pharetra 
+            sit amet arcu.
+        </p>
+        <p>
+            In hac habitasse platea dictumst. Vivamus quis nibh interdum, tincidunt diam id, aliquam dui. 
+            Curabitur fringilla lorem id quam hendrerit, non facilisis justo tincidunt. Nullam
+            et arcu orci. Pellentesque pretium erat enim, hendrerit gravida mauris semper eget. 
+            Ut commodo, ipsum vitae convallis ultricies, nibh ligula molestie eros, a rhoncus est
+            ipsum sit amet tortor. Curabitur finibus pharetra ligula at porttitor. Vivamus scelerisque
+            consectetur mauris, eget pulvinar risus suscipit ut. Integer eget hendrerit orci. Maecenas 
+            bibendum varius sapien, eu vehicula augue rutrum vitae. Vestibulum ante ipsum primis in faucibus orci 
+            luctus et ultrices posuere cubilia curae;
+        </p>
+        <br>
+    </div>
+</div>
+
     <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
