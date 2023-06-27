@@ -1,0 +1,54 @@
+body {
+    background-color: #17202A;
+}
+.form-horizontal {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.SectionRegistro 
+{
+    margin-top: 3%;
+    width: 50%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px;
+    border-radius: 40px;
+    box-shadow: 0 2px 15px black;
+    color: black;
+}
+.errorContrasena 
+{
+    display:none;
+    font-size: 14px;
+}
+
+.titulo {
+    color: black;
+    font-size: 30px;
+}
+.input-group-prepend {
+    background-color: #17202A;
+    width: 45px;
+    border-radius: 10px;
+}
+.icono {
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+}
+
+.botons {
+    width: 49%;
+    height: 70px;
+    border: none;
+    border-radius: 40px;
+}
+
+.registroContent {
+    margin-top: 2%;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 4%;
+}
